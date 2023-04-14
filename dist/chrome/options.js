@@ -14063,6 +14063,8 @@ ${injectedCss}}
       translationTargetTranslationElementPreWhitespaceWrapperClass
     ), translationTheme && (classList.push(
       `${brandId}-target-translation-theme-${translationTheme}`
+    ) && translationTheme === "mask" && classList.push(
+      `${brandId}-target-translation-theme-dashed`
     ), isInline ? classList.push(
       `${translationTargetTranslationElementInlineWrapperClass}-theme-${translationTheme}`
     ) : classList.push(
@@ -14076,6 +14078,8 @@ ${injectedCss}}
     ];
     return translationTheme && innerClassList.push(
       `${brandId}-target-translation-theme-${translationTheme}-inner`
+    ) && translationTheme === "mask" && innerClassList.push(
+      `${brandId}-target-translation-theme-dashed-inner`
     ), innerClassList;
   }
   function paragraphToHtml(sourceItem, sentence, ctx) {
